@@ -1,3 +1,7 @@
+github:
+  branch: master
+  repository: https://github.com/nvang78/sw-concourse-training.git
+  username: nvang78
 jobs:
 - name: job-upload-release
   plan:
@@ -15,6 +19,15 @@ jobs:
       run:
         path: source-code/nginx_release/ci/tasks/upload-release.sh
     task: upload-release
+  public: true
+- name: job-deploy-release
+  plan:
+  - get: source-code
+    params:
+      depth: 1
+    passed:
+    - job-upload-release
+    trigger: true
   - config:
       image_resource:
         source:
