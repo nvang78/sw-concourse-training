@@ -1,0 +1,15 @@
+name: nvang78-nginx
+version: 0+dev.1541701775
+commit_hash: 552afa3
+uncommitted_changes: true
+jobs:
+- name: nginx
+  version: ddfa49a2039d36bda9cec7df22a1b87c9a23285b
+  fingerprint: ddfa49a2039d36bda9cec7df22a1b87c9a23285b
+  sha1: f6c3b45c1f456c65745462a6d3525b75c066416b
+packages:
+- name: nginx
+  version: db883a8ce5d8b4a8921fa300f657413d3031fb1a
+  fingerprint: db883a8ce5d8b4a8921fa300f657413d3031fb1a
+  sha1: f1359567b0648d1f278c6f23cc893a6553e8b31d
+  dependencies: []
